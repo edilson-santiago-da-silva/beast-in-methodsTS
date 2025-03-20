@@ -1,0 +1,8 @@
+<input [(ngModel)]="novoItem" placeholder="Digite um item">
+<button (click) ="adicionar()">Adicionar</button>
+
+<ul>
+    <li *ngFor="let item of lista; let i = index">
+        {{ item }} <button (click) = "remover(i)">X</button>
+    </li>
+</ul>
