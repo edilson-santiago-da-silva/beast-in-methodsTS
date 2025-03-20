@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExercicioSomaComponent implements OnInit {
 
-  num1: number = 0;
-  num2: number = 0;
-  resultado: number = 0;
+  num1: number | null = null;
+  num2: number | null = null;
+  resultado: number | null = null;
 
 
   constructor() { }
@@ -18,7 +18,12 @@ export class ExercicioSomaComponent implements OnInit {
   }
 
   somar(): void{
-    this.resultado = this.num1 * this.num2;
+    this.resultado = (this.num1 ?? 0) + (this.num2 ?? 0);
   }
 
+  reset(): void{
+    this.num1 = null;
+    this.num2 = null;
+    this.resultado = 0;
+  }
 }

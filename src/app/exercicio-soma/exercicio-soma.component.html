@@ -1,4 +1,5 @@
-<input type="number" [(ngModel)]="num1" placeholder="número 1">
-<input type="number" [(ngModel)]="num2" placeholder="número 2">
+<input type="number" [(ngModel)]="num1" placeholder="número 1" class="input-number">
+<input type="number" [(ngModel)]="num2" placeholder="número 2" class="input-number">
 <button (click)="somar()">Somar</button>
+<button (click)="reset()">Reset</button>
 <p>Resultado: {{resultado}}</p>
